@@ -87,7 +87,6 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 
 <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../site_libs/quarto-nav/headroom.min.js"></script>
 <script src="../site_libs/clipboard/clipboard.min.js"></script>
 <script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
@@ -103,11 +102,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
-  "location": "navbar",
+  "location": "sidebar",
   "copy-button": false,
   "collapse-after": 3,
-  "panel-placement": "end",
-  "type": "overlay",
+  "panel-placement": "start",
+  "type": "textbox",
   "limit": 20,
   "language": {
     "search-no-results-text": "No results",
@@ -129,95 +128,14 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 </head>
 
-<body class="nav-fixed">
+<body class="fullcontent">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg navbar-dark ">
-      <div class="navbar-container container-fluid">
-      <div class="navbar-brand-container">
-    <a href="../index.html" class="navbar-brand navbar-brand-logo">
-    <img src="https://documentation.dataspace.copernicus.eu/_images/logos/copernicus-white-BL.svg" alt="" class="navbar-logo">
-    </a>
-    <a class="navbar-brand" href="../index.html">
-    <span class="navbar-title">Copernicus Dataspace Ecosystem Docs</span>
-    </a>
-  </div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
-  <span class="navbar-toggler-icon"></span>
-</button>
-          <div class="collapse navbar-collapse" id="navbarCollapse">
-            <ul class="navbar-nav navbar-nav-scroll me-auto">
-  <li class="nav-item">
-    <a class="nav-link" href="../Home.html">
- <span class="menu-text">Home</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="../Roadmap.html">
- <span class="menu-text">Roadmap</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="../Applications.html">
- <span class="menu-text">Applications</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="../Data.html">
- <span class="menu-text">Data</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="../APIs.html">
- <span class="menu-text">APIs</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="../FAQ.html">
- <span class="menu-text">Frequently Asked Questions</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="../Support.html">
- <span class="menu-text">Service Desk</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="../openeo.html">
- <span class="menu-text">openeo</span></a>
-  </li>  
-</ul>
-              <div id="quarto-search" class="" title="Search"></div>
-          </div> <!-- /navcollapse -->
-      </div> <!-- /container-fluid -->
-    </nav>
-</header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#data-catalogue-api-with-odata-interface" id="toc-data-catalogue-api-with-odata-interface" class="nav-link active" data-scroll-target="#data-catalogue-api-with-odata-interface">Data catalogue API with OData interface</a>
-  <ul class="collapse">
-  <li><a href="#query-structure" id="toc-query-structure" class="nav-link" data-scroll-target="#query-structure">Query structure</a></li>
-  <li><a href="#filter-option" id="toc-filter-option" class="nav-link" data-scroll-target="#filter-option">Filter option</a>
-  <ul class="collapse">
-  <li><a href="#query-by-name" id="toc-query-by-name" class="nav-link" data-scroll-target="#query-by-name">Query by name</a></li>
-  <li><a href="#query-by-list" id="toc-query-by-list" class="nav-link" data-scroll-target="#query-by-list">Query by list</a></li>
-  <li><a href="#query-collection-of-products" id="toc-query-collection-of-products" class="nav-link" data-scroll-target="#query-collection-of-products">Query Collection of Products</a></li>
-  <li><a href="#query-by-publication-date" id="toc-query-by-publication-date" class="nav-link" data-scroll-target="#query-by-publication-date">Query by Publication Date</a></li>
-  <li><a href="#query-by-sensing-date" id="toc-query-by-sensing-date" class="nav-link" data-scroll-target="#query-by-sensing-date">Query by Sensing Date</a></li>
-  <li><a href="#query-by-geographic-criteria" id="toc-query-by-geographic-criteria" class="nav-link" data-scroll-target="#query-by-geographic-criteria">Query by Geographic Criteria</a></li>
-  <li><a href="#query-by-attributes" id="toc-query-by-attributes" class="nav-link" data-scroll-target="#query-by-attributes">Query by attributes</a></li>
-  <li><a href="#orderby-option" id="toc-orderby-option" class="nav-link" data-scroll-target="#orderby-option">Orderby option</a></li>
-  <li><a href="#top-option" id="toc-top-option" class="nav-link" data-scroll-target="#top-option">Top option</a></li>
-  </ul></li>
-  <li><a href="#skip-option" id="toc-skip-option" class="nav-link" data-scroll-target="#skip-option">Skip option</a></li>
-  <li><a href="#count-option" id="toc-count-option" class="nav-link" data-scroll-target="#count-option">Count option</a></li>
-  <li><a href="#expand-option" id="toc-expand-option" class="nav-link" data-scroll-target="#expand-option">Expand option</a></li>
-  <li><a href="#product-download" id="toc-product-download" class="nav-link" data-scroll-target="#product-download">Product Download</a></li>
-  </ul></li>
-  </ul>
-</nav>
-    </div>
+    
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
@@ -518,7 +436,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="op">!</span>wget  <span class="op">--</span>header <span class="st">"Authorization: Bearer $KEYCLOAK_TOKEN"</span> <span class="st">'http://catalogue.dataspace.copernicus.eu/odata/v1/Products(db0c8ef3-8ec0-5185-a537-812dad3c58f8)/$value'</span> <span class="op">-</span>O example_odata.<span class="bu">zip</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
-<pre><code>--2023-02-08 13:07:57--  http://catalogue.dataspace.copernicus.eu/odata/v1/Products(db0c8ef3-8ec0-5185-a537-812dad3c58f8)/$value
+<pre><code>--2023-02-10 06:37:56--  http://catalogue.dataspace.copernicus.eu/odata/v1/Products(db0c8ef3-8ec0-5185-a537-812dad3c58f8)/$value
 Resolving catalogue.dataspace.copernicus.eu (catalogue.dataspace.copernicus.eu)... </code></pre>
 </div>
 <div class="cell-output cell-output-stdout">
@@ -532,7 +450,7 @@ HTTP request sent, awaiting response... </code></pre>
 <div class="cell-output cell-output-stdout">
 <pre><code>308 Permanent Redirect
 Location: https://catalogue.dataspace.copernicus.eu/odata/v1/Products(db0c8ef3-8ec0-5185-a537-812dad3c58f8)/$value [following]
---2023-02-08 13:07:58--  https://catalogue.dataspace.copernicus.eu/odata/v1/Products(db0c8ef3-8ec0-5185-a537-812dad3c58f8)/$value
+--2023-02-10 06:37:56--  https://catalogue.dataspace.copernicus.eu/odata/v1/Products(db0c8ef3-8ec0-5185-a537-812dad3c58f8)/$value
 Connecting to catalogue.dataspace.copernicus.eu (catalogue.dataspace.copernicus.eu)|64.225.133.92|:443... </code></pre>
 </div>
 <div class="cell-output cell-output-stdout">
